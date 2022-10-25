@@ -1,6 +1,5 @@
 <template>
 	<div class="sidebar">
-		SIDEBAR
 		<div class="container">
 			<div v-for="(item, index) in sidebarItems" :key="'sidebar-item-' + index">
 				<SideBarItems :data="item" />
@@ -20,14 +19,9 @@ const sidebarItems = ref([
 	{
 		label: 'About',
 		path: '/about'
-	}
+	},
 ]);
 </script>
 
 <style lang="scss" scoped>
-.container {
-	border: 2px solid black;
-	height: 100vp;
-	width: 30%;
-}
 </style>

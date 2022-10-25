@@ -1,17 +1,12 @@
 <template>
-  <div class="container">
-    <header>
-      <slot name="header"></slot>
-    </header>
-    <div>
-      <slot name="sidebar"></slot>
-    </div>
+  <header>
+    <slot name="header"></slot>
+  </header>
+  <div class="main-content">
+    <slot name="sidebar"></slot>
     <main>
       <slot name="main"></slot>
     </main>
-    <footer>
-      <slot name="footer"></slot>
-    </footer>
   </div>
 </template>
 

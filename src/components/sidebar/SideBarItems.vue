@@ -1,14 +1,13 @@
 <template>
-	<div>
-		{{data.label}}
-
+	<div class="sidebar-item">
+		<RouterLink :to="data.path">{{data.label}}</RouterLink>
 	</div>
 </template>
 
 <script setup>
 defineProps({
 	data: {
-		type: Array,
+		type: Object,
 		required: true,
 	},
 });
