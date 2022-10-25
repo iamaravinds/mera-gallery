@@ -1,6 +1,9 @@
 <template>
 	<div>
 		<div class="login-form-container">
+			<span class='login-head-info'>
+				Lets get you logged in !!!
+			</span>
 			<div>
 				<input 
 					type="text"
