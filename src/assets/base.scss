@@ -147,3 +147,26 @@ body {
     --color-text: var(--vt-c-text-dark-2);
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: gold;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: orangered;
+  box-shadow: inset 0 0 5px gold;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: red;
+}
