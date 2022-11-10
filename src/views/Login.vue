@@ -26,9 +26,9 @@
 				<button
 					type="submit"
 					class="float-right btn-primary"
-				>Login</button>
-				<GButton>Login</GButton>
-
+				>
+				Login
+				</button>
 			</div>
 		</div>
 	</div>

@@ -4,6 +4,7 @@ $color_3: #181818;
 $background-color_1: orange;
 $background-gradient: linear-gradient(to right,#ece2ab, #e7c88c, #f1b640, #ece2ab);
 $background-gradient_2: linear-gradient(to right,#e6c71a, #e1a834, #eda618);
+$background-gradient_3: linear-gradient(to right,#f4e9a8, #fae674, #f6d937);
 
 @import './base.scss';
 
@@ -75,7 +76,7 @@ a {
 		float: left;
 	}
   .search-box {
-    width: 80%;
+    width: 70%;
     .search-label {
       margin-bottom: 0.5rem;
       color: #111827;
@@ -98,7 +99,7 @@ a {
       color: #000000;
       border-color: black;
       border-radius: 0.5rem;
-      border-width: 2px;
+      border-width: 1px;
       height: 60px;
       .search-flex {
         display: flex;
@@ -196,6 +197,7 @@ a {
 
 	.action-buttons {
 		float: right;
+    margin-top: 0px;
     a {
       text-decoration: none;
       color: $color_3;
@@ -263,23 +265,32 @@ a {
 }
 
 .login-form-container {
-  width: 275px;
+  width: 300px;
+  height: 200px;
+  padding: 10px;
   margin: 80px auto;
+  border: 1px solid orange;
+  border-radius: 5px;
+  background: $background-gradient_3;
   .login-head-info {
     color: $color_3;
     font-size: 25px;
   }
   .login-input {
     text-align: center;
-    background: orange;
+    background: rgb(240, 199, 124);
     color: $color_3;
     font-size: 20px;
     padding: 2px;
     height: 35px;
     width: 260px;
     border: 0.5px solid $background-color_1;
-    border-radius: 15px;
+    border-radius: 5px;
     margin: 5px;
+    &::-webkit-input-placeholder {
+      font-weight: 400;
+      color: rgb(105, 105, 105);
+    }
     &:hover {
       border: 2px solid black;
     }

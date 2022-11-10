@@ -49,12 +49,23 @@
 					v-model='searchText'
 					>
 				<button 
-				class='btn-primary'
+					class='btn-primary'
 					type="button" 
 					@click='search'
 				>
 					Search
 				</button>
+				&nbsp;
+				<Transition>
+					<button
+						v-if='isSearchInProgress'
+						class='btn-primary'
+						type="button" 
+						@click='reset'
+					>
+						Reset
+					</button>
+				</Transition>
 			</div>
 		</div>
 	</form>
@@ -83,12 +94,17 @@ const selectedCategory = ref('');
 const isdropdownClicked = ref(false);
 const searchText = ref('');
 const getSelectedCategory = computed(() => selectedCategory.value || defaultCategoryPlaceholder);
+const isSearchInProgress = computed(() => !!(selectedCategory.value || searchText.value));
 
 function search() {
   emit('search', {
 		category: selectedCategory.value,
 		searchText: searchText.value
 	});
+}
+function reset() {
+	selectedCategory.value = '';
+	searchText.value = '';
 }
 
 function dropdownClicked(value) {
@@ -104,3 +120,14 @@ function selectCategory(value) {
 	return selectedCategory.value = value;
 }
 </script>
+<style lang='scss' scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>

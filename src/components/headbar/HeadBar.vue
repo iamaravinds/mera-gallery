@@ -14,9 +14,9 @@
 			/>
 		</div>
 		<div class="action-buttons">
-			<RouterLink to="/login">
-				<GButton>Login</GButton>
-			</RouterLink>
+			<!-- <RouterLink to="/login">
+				<button class='btn-primary'>Login</button>
+			</RouterLink> -->
 		</div>
 	</div>
 </template>

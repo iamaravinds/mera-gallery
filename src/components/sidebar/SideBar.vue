@@ -20,6 +20,10 @@ const sidebarItems = ref([
 		label: 'About',
 		path: '/about'
 	},
+	{
+		label: 'Logout',
+		path: '/login'
+	},
 ]);
 </script>
 
