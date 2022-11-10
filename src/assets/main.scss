@@ -37,8 +37,8 @@ a {
 
 @media (min-width: 1024px) {
 	body {
-		display: flex;
 		place-items: center;
+    overflow: hidden;
 	}
 
 	#app {
@@ -71,12 +71,11 @@ a {
   color: black;
   display: flex;
   .head-title {
-		width: 30%;
+		width: 20%;
 		float: left;
 	}
   .search-box {
-    width: 60%;
-    height: 150px;
+    width: 80%;
     .search-label {
       margin-bottom: 0.5rem;
       color: #111827;
@@ -113,11 +112,11 @@ a {
           padding-left: 1rem;
           padding-right: 1rem;
           margin: 0.5rem;
-          font-weight: 600;
           text-align: center;
           flex-shrink: 0;
           align-items: center;
-          width: 30%;
+          width: 200px;
+          border-right: 1px solid;
           .icon-position {
             margin-left: 0.25rem;
             width: 1rem;
@@ -172,6 +171,11 @@ a {
           width: 100%;
           background: transparent;
           outline-width: 0px;
+          &::-webkit-input-placeholder {
+            font-weight: 600;
+            color: rgb(105, 105, 105);
+          }
+          
         }
         .search-button {
           padding: 0.25rem; 
@@ -191,7 +195,6 @@ a {
   }
 
 	.action-buttons {
-    margin-right: 10px;
 		float: right;
     a {
       text-decoration: none;
@@ -201,31 +204,61 @@ a {
     }
 	}
 }
-
-.main-content {
-  display: flex;
-  height: 85vh;
-	.sidebar {
-    float: left;
-		width: 20%;
-		border: 2px solid black;
-    transition: 0.4s;
-		.sidebar-item {
-      border: 1px dashed goldenrod;
-      color: $color_3;
-      margin: auto    ;
-      &:hover {
-        background-color: $background-color_1;
+@media (min-width: 720px) {
+  .main-content {
+    display: flex;
+    height: 95vh;
+    .sidebar {
+      float: left;
+      width: 5%;
+      border: 2px solid black;
+      border-radius: 5px;
+      transition: 0.4s;
+      .sidebar-item {
+        border: 1px dashed goldenrod;
+        color: $color_3;
+        margin: auto    ;
+        &:hover {
+          background-color: $background-color_1;
+        }
       }
     }
-	}
-  main {
-    float: right;
-		width: 80%;
-    height: 100%;
-    overflow-y: scroll;
-    margin: 5px;
-    padding: 5px;
+    main {
+      float: right;
+      overflow-y: scroll;
+      margin: 5px;
+      padding: 5px;
+      width: 95%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    display: flex;
+    height: 95vh;
+    .sidebar {
+      float: left;
+      width: 15%;
+      border: 2px solid black;
+      border-radius: 5px;
+      transition: 0.4s;
+      .sidebar-item {
+        border: 1px dashed goldenrod;
+        color: $color_3;
+        margin: auto    ;
+        &:hover {
+          background-color: $background-color_1;
+        }
+      }
+    }
+    main {
+      float: right;
+      overflow-y: scroll;
+      margin: 5px;
+      padding: 5px;
+      width: 85%;
+    }
   }
 }
 

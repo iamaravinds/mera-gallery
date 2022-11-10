@@ -161,12 +161,12 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: orangered;
-  box-shadow: inset 0 0 5px gold;
+  background: #FFA500;
+  box-shadow: inset 0 0 5px red;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: red;
+  background: orange;
 }

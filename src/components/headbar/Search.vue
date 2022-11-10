@@ -68,7 +68,7 @@ const emit = defineEmits(['search'])
 const { placeholder, category, defaultCategoryPlaceholder } = defineProps({
 	placeholder: {
 		type: String,
-		default: () => 'Start Typing',
+		default: () => 'Start Searching',
 	},
 	category: {
 		type: Array,
