@@ -25,15 +25,16 @@
 			<div>
 				<button
 					type="submit"
-					class="btn-primary"
+					class="float-right btn-primary"
 				>Login</button>
+				<GButton>Login</GButton>
+
 			</div>
 		</div>
 	</div>
 </template>
 
 <script setup>
-
 </script>
 
 <style lang="scss" scoped>

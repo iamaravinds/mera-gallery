@@ -2,6 +2,8 @@ $color_1: white;
 $color_2: whitesmoke;
 $color_3: #181818;
 $background-color_1: orange;
+$background-gradient: linear-gradient(to right,#ece2ab, #e7c88c, #f1b640, #ece2ab);
+$background-gradient_2: linear-gradient(to right,#e6c71a, #e1a834, #eda618);
 
 @import './base.scss';
 
@@ -45,6 +47,18 @@ a {
 		// padding: 0 2rem;
 	}
 }
+.btn-primary  {
+    border: 2px solid gray;
+    border-radius: 13px;
+    padding: 4px;
+    transition: 0.4s;
+    color: $color_3;
+    background: $background-color_1;
+  &:hover {
+    border: 3px solid indigo;
+    color: $color_2;
+  }
+}
 .about {
   display: flex;
   align-items: center;
@@ -53,12 +67,129 @@ a {
 
 .header-container {
 	height: 80px;
-  background: linear-gradient(to right,#ece2ab, #e7c88c, #f1b640, #ece2ab);
+  background: $background-gradient;
   color: black;
-	.head-title { 
-		width: 70%;
+  display: flex;
+  .head-title {
+		width: 30%;
 		float: left;
 	}
+  .search-box {
+    width: 60%;
+    height: 150px;
+    .search-label {
+      margin-bottom: 0.5rem;
+      color: #111827;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      font-weight: 500;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+    }
+    .search-container {
+      position: relative;
+      padding: 0.75rem;
+      transition-property: box-shadow;
+      transition-duration: 200ms;
+      color: #000000;
+      border-color: black;
+      border-radius: 0.5rem;
+      border-width: 2px;
+      height: 60px;
+      .search-flex {
+        display: flex;
+        height: 40px;
+        .dropdown-button {
+          display: inline-flex;
+          z-index: 10;
+          padding: 0.5rem;
+          padding-top: 0.625rem;
+          padding-bottom: 0.625rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          margin: 0.5rem;
+          font-weight: 600;
+          text-align: center;
+          flex-shrink: 0;
+          align-items: center;
+          width: 30%;
+          .icon-position {
+            margin-left: 0.25rem;
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+        .dropdown-popup {
+          position: absolute;
+          z-index: 20;
+          background: linear-gradient(to right,#ece2ab, #e7c88c, #f1b640, #ece2ab);
+          width: 205px;
+          border-radius: 0.25rem;
+          border-top-width: 1px;
+          border-color: #F3F4F6;
+          box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+          ul {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem; 
+            color: #374151; 
+            font-size: 0.875rem;
+            line-height: 1.25rem; 
+            .dropdown-item {
+              display: inline-flex; 
+              padding-top: 0.5rem;
+              padding-bottom: 0.5rem; 
+              padding-left: 1rem;
+              padding-right: 1rem; 
+              color: #000000; 
+              font-size: 1.25rem;
+              line-height: 1.75rem; 
+              font-weight: 600; 
+              width: 100%; 
+              border-color: #b98d3a;
+              border-width: 1px; 
+              &:hover {
+                background: $background-color_1;
+              }
+            }
+          }
+        }
+        .search-icon {
+          color: #1F2937; 
+          width: 3.5rem; 
+          height: 3.5rem; 
+        }
+        .search-input {
+          padding: 0.5rem;
+          margin: 0.5rem;
+          font-size: 20px;
+          line-height: 2rem;
+          font-weight: 600;
+          width: 100%;
+          background: transparent;
+          outline-width: 0px;
+        }
+        .search-button {
+          padding: 0.25rem; 
+          transition-property: box-shadow; 
+          transition-duration: 200ms; 
+          transition-timing-function: linear; 
+          color: #ffffff; 
+          font-weight: 600; 
+          text-align: center; 
+          height: 2.5rem;
+
+          border-radius: 0.5rem; 
+          border-width: 2px; 
+        }
+      }
+    }
+  }
+
 	.action-buttons {
     margin-right: 10px;
 		float: right;
@@ -120,21 +251,8 @@ a {
       border: 2px solid black;
     }
   }
-  .btn-primary {
+  .float-right {
     float: right;
-    height: 35px;
-    width: 60px;
-    border: 2px solid $background-color_1;
-    border-radius: 15px;
-    margin: 5px;
-    transition: 0.4s;
-    &:hover {
-      height: 38px;
-      width: 65px;
-      background-color: $background-color_1;
-      border: 2px solid black;
-      color: $color_2;  
-    }
   }
 }
 
